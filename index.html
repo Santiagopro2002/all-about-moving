@@ -87,7 +87,7 @@
         <span>What We Offer</span>
         <h2>Our Moving Services</h2>
         <p>
-          Complete moving solutions for homes, businesses and long-distance relocations.
+          Practical support for homes, businesses and long-distance relocations, with careful attention at every step.
         </p>
       </div>
 
@@ -97,7 +97,7 @@
           <div class="icon">🏢</div>
           <h3>Commercial Moving</h3>
           <p>
-            Office and business moving services with organization, speed and professional handling.
+            Organized office and business moves designed to reduce interruptions and protect equipment.
           </p>
         </div>
 
@@ -105,7 +105,7 @@
           <div class="icon">🏠</div>
           <h3>Residential Moving</h3>
           <p>
-            Safe and careful moving for apartments, houses and family relocations.
+            Careful moving for apartments, houses and family relocations, from loading to delivery.
           </p>
         </div>
 
@@ -113,7 +113,7 @@
           <div class="icon">🚚</div>
           <h3>Nationwide Moving</h3>
           <p>
-            Long-distance moving services across the United States with reliable support.
+            Reliable support for moves between cities and states, with clear communication along the way.
           </p>
         </div>
 
@@ -121,7 +121,7 @@
           <div class="icon">📦</div>
           <h3>Packing & Unpacking</h3>
           <p>
-            Professional packing and unpacking to protect your belongings during the move.
+           Boxes, wrapping and careful organization to help protect your belongings before and after the move.
           </p>
         </div>
 
@@ -245,6 +245,49 @@
     </div>
   </section>
 
+  <!-- SIMPLE PROCESS -->
+  <section class="simple-process" id="process">
+    <div class="container">
+
+      <div class="section-title">
+        <br />
+        <span>Simple Process</span>
+        <h2>Your move in three clear steps</h2>
+        <p>
+          A simple process that helps you know what comes next.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="icon">1️⃣</div>
+          <h3>Tell us about your move</h3>
+          <p>
+           Share the date, locations, service type and any special details.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="icon">2️⃣</div>
+          <h3>Receive your estimate</h3>
+          <p>
+           We review your information and contact you with the next steps.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="icon">3️⃣</div>
+          <h3>Enjoy a smoother moving day</h3>
+          <p>
+           Our team handles the work with care, organization and attention.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container contact-grid">
@@ -274,34 +317,61 @@
         </div>
       </div>
 
-      <form class="contact-form" id="quoteForm">
+      <form class="contact-form" id="quoteForm" novalidate>
         <h3>Request Your Free Estimate</h3>
-
+        
         <div class="form-group">
-          <input type="text" id="name" placeholder="Full Name" required />
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" />
+          <span class="error-msg" id="nameError"></span>
         </div>
 
         <div class="form-group">
-          <input type="tel" id="phone" placeholder="Phone Number" required />
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Your phone number" />
+          <span class="error-msg" id="phoneError"></span>
         </div>
 
         <div class="form-group">
-          <input type="email" id="email" placeholder="Email Address" />
+          <label for="email">Email Address (Optional)</label>
+          <input type="email" id="email" placeholder="Your email address" />
         </div>
 
         <div class="form-group">
-          <select id="service" required>
-            <option value="">Select Service</option>
+          <label for="moveDate">Moving Date</label>
+          <input type="date" id="moveDate" />
+          <span class="error-msg" id="moveDateError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="pickup">Moving From</label>
+          <input type="text" id="pickup" placeholder="City or ZIP code" />
+          <span class="error-msg" id="pickupError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Moving To</label>
+          <input type="text" id="destination" placeholder="City or ZIP code" />
+          <span class="error-msg" id="destinationError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service</label>
+          <select id="service">
+            <option value="">Select a service</option>
             <option value="Residential Moving">Residential Moving</option>
             <option value="Commercial Moving">Commercial Moving</option>
             <option value="Nationwide Moving">Nationwide Moving</option>
             <option value="Packing & Unpacking">Packing & Unpacking</option>
             <option value="Storage Solutions">Storage Solutions</option>
           </select>
+          <span class="error-msg" id="serviceError"></span>
         </div>
 
         <div class="form-group">
-          <textarea id="message" rows="5" placeholder="Tell us about your move..." required></textarea>
+          <label for="message">Move Details</label>
+          <textarea id="message" rows="5" placeholder="Tell us about furniture, stairs, elevators..."></textarea>
+          <span class="error-msg" id="messageError"></span>
         </div>
 
         <button type="submit" class="btn-primary full">Send Request</button>
@@ -310,7 +380,6 @@
           Your message will open WhatsApp with your estimate request.
         </p>
       </form>
-
     </div>
   </section>
 
